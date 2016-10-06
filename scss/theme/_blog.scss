@@ -5,6 +5,9 @@ ol.breadcrumb {
 
 .list-item {
     margin: 30px 0 50px;
+    border: solid 1px #ddd;
+    padding: 0 $core-font-size;
+    border-radius: $border-radius *4;
 }
 
 .blog-header-image {

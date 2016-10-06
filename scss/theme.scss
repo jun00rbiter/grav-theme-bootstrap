@@ -11,6 +11,10 @@
 
 @import "theme/typography";
 
+@import "theme/codestyle";
+
+@import "theme/table";
+
 @import "theme/default";
 
 @import "theme/blog";
@@ -18,3 +22,5 @@
 @import "theme/fixes";
 
 @import "theme/modular/all";
+
+@import "_custom_fix";

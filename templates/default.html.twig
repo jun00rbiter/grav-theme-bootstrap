@@ -1,7 +1,37 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-     <div class="container">
-	{{ page.content }}
+    <div class="container contents">
+        <div class="noprint">
+        <span class="pull-right">
+            &nbsp;<i class="fa fa-calendar"></i> <span>{{ page.date|date("F j, Y, g:i a") }}</span>
+        </span>
+        {% if page.taxonomy.tag %}
+        <span class="tags pull-right">
+            {% for tag in page.taxonomy.tag %}
+            <a class="label label-primary" href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+        </span>
+        {% endif %}
+        </div>
+        <h1>{{ page.title }}</h1>
+        {{ page.content }}
+        <div class="noscreen">
+        <hr>
+        <p>
+            Modified at : {{ page.date|date("F j, Y, g:i a") }}
+        </p>
+        {% if page.taxonomy.tag %}
+        <p>
+            Tags :
+        <span class="tags">
+            {% for tag in page.taxonomy.tag %}
+            <a class="label label-primary" href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+        </span>
+        </p>
+        {% endif %}
+        </div>
+
     </div>
 {% endblock %}

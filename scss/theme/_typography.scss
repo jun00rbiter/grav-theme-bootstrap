@@ -20,51 +20,96 @@ td {
 
 /* Notice Styles */
 blockquote {
-	padding: 0 0 0 20px !important;
-	font-size: 16px;
+	margin: 0;
+	padding: 0 0 0 10px !important;
+	font-size: $core-font-size * 1.2;
 	color: #666;
+	border: solid 1px #888;
+	border-width: 0 0 0 5px;
+
+	p{
+		font-size: $core-font-size;
+		padding-top: 5px;
+		margin: 5px 5px 5px 0;
+	}
 
 	> blockquote > blockquote {
+		/* Yellow : index level is 3 */
+		box-sizing: border-box;
 		margin: 0;
+		padding: 0 10px 0 10px !important;
+		margin-left: -30px;
+		border: solid 1px #000;
+		color: #8a6d3b;
+		background-color: #fcf8e3 !important;;
+		border-color: #8a6d3b;
 
-		p {
-			padding: 15px;
-			display: block;
-			margin-top: 0rem;
-			margin-bottom: 0rem;
-			border: 1px solid #f0f0f0;
+		p{
+			font-size: $core-font-size;
+			font-color: #222;
+			padding: 0 0 0 0 !important;
+			margin: 5px 0 !important;
 		}
 
-		> p {
-			/* Yellow */
-			margin-left: -75px;
-			color: #8a6d3b;
-			background-color: #fcf8e3;
-			border-color: #faebcc;
-		}
-
-		blockquote > p {
-			/* Red */
-			margin-left: -100px;
+		> blockquote {
+			/* Red : index level is 4 */
+			box-sizing: border-box;
+			margin: -1px -11px -1px -11px;
+			border: solid 1px #000;
 			color: #a94442;
-			background-color: #f2dede;
-			border-color: #ebccd1;
-		}
+			background-color: #f2dede !important;
+			border-color: #a94442;
 
-		blockquote > blockquote > p {
-			/* Blue */
-			margin-left: -125px;
-			color: #31708f;
-			background-color: #d9edf7;
-			border-color: #bce8f1;
-		}
+			> blockquote {
+				/* Blue : index level is 5 */
+				box-sizing: border-box;
+				margin: -1px -11px -1px -11px;
+				border: solid 1px #000;
+				color: #3c5d76;
+				background-color: #d8e3f0 !important;
+				border-color: #3c5d76;
 
-		blockquote > blockquote > blockquote > p {
-			/* Blue */
-			margin-left: -150px;
-			color: #3c763d;
-			background-color: #dff0d8;
-			border-color: #d6e9c6;
+				> blockquote {
+					/* Green : index level is 5 */
+					box-sizing: border-box;
+					margin: -1px -11px -1px -11px;
+					border: solid 1px #000;
+					color: #3c763d;
+					background-color: #dff0d8 !important;
+					border-color: #3c763d;
+				}
+			}
 		}
+	}
+}
+
+dl {
+	border: dashed 1px #888;
+	padding: 0 10px 5px 10px;
+	border-radius: $border-radius;
+	dt{
+		font-weight: bold;
+		margin: 10px 0 0 0;
+	}
+	dt:after{
+		content: " :";
+	}
+	dd{
+		font-weight: normal;
+		margin: 0 0 5px 30px;
+		> p{
+			margin: 0;
+			paddint: 0;
+		}
+	}
+	dd{
+		font-weight: normal;
+		margin: 0 0 5px 30px;
+	}
+}
+.contents {
+	li > a, p > a {
+		background: #eef;
+		text-decoration: underline;
 	}
 }
