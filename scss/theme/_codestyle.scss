@@ -1,20 +1,21 @@
-p code {
+code {
     border: solid 1px #e43f3f;
     margin: 0 2px;
     padding: 0 2px;
     vertical-align: baseline;
 }
-
 @media screen{
     pre {
         border-style: solid;
         border-color: #444;
         background: #f0f0f0 !important;
+        margin-top: $core-font-size *0.5;
         margin-bottom: $core-font-size *1.5;
         > code {
             color: #000;
             font-size: 16px;
             font-family: "ＭＳ ゴシック","mplus-1m-light",monospace !important;
+            border:none;
         }
     }
 }

@@ -86,3 +86,14 @@ body {
 .contents-footer{
 margin:20px
 }
+
+ul, ol {
+    margin-top: $core-font-size;
+    margin-bottom: $core-font-size;
+    > li{
+        margin: $core-font-size*0.5 !important;
+        > p {
+            margin-bottom: $core-font-size*0.1;
+        }
+    }
+}

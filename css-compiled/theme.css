@@ -90,7 +90,7 @@ dl {
   background: #eef;
   text-decoration: underline; }
 
-p code {
+code {
   border: solid 1px #e43f3f;
   margin: 0 2px;
   padding: 0 2px;
@@ -101,11 +101,13 @@ p code {
     border-style: solid;
     border-color: #444;
     background: #f0f0f0 !important;
+    margin-top: 8px;
     margin-bottom: 24px; }
     pre > code {
       color: #000;
       font-size: 16px;
-      font-family: "ＭＳ ゴシック","mplus-1m-light",monospace !important; } }
+      font-family: "ＭＳ ゴシック","mplus-1m-light",monospace !important;
+      border: none; } }
 @media print {
   pre {
     border-style: solid;
@@ -197,6 +199,14 @@ body {
 
 .contents-footer {
   margin: 20px; }
+
+ul, ol {
+  margin-top: 16px;
+  margin-bottom: 16px; }
+  ul > li, ol > li {
+    margin: 8px !important; }
+    ul > li > p, ol > li > p {
+      margin-bottom: 1.6px; }
 
 ol.breadcrumb {
   padding-left: 0;
