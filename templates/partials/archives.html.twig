@@ -5,9 +5,9 @@
 {% set month = "now"|date("m/d/Y") %}
 {% for month,items in archives_data %}
     <li class="list-group-item">
-    	<a href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date('M_Y')|lower|e('url') }}">
+        <a href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date('M_Y')|lower|e('url') }}">
         {% if archives_show_count %}
-        <span class="label counter">{{ items|length }}</span>
+        <span class="badge counter">{{ items|length }}</span>
         {% endif %}
         <span class="archive_date">{{ month }}</span>
         </a>

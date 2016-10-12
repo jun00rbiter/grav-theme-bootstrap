@@ -26,7 +26,7 @@
       {% set count = count + items|length %}
       {% endfor %}
 
-      <label for="input-archive-{{ year_index }}" class="label counter">{{ count }}</label>
+      <label for="input-archive-{{ year_index }}" class="label label-default counter">{{ count }}</label>
       {% else %}
       <label for="input-archive-{{ year_index }}"></label>
       {% endif %}
