@@ -1,3 +1,6 @@
+{% if config.plugins.archive_plus.enabled %}
+{% include 'partials/archive_plus.html.twig' %}
+{% else %}
 <ul class="archives list-group">
 {% set month = "now"|date("m/d/Y") %}
 {% for month,items in archives_data %}
@@ -11,3 +14,4 @@
     </li>
 {% endfor %}
 </ul>
+{% endif %}
