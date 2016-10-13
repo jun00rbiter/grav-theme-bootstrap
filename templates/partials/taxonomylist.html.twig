@@ -5,8 +5,8 @@
 <span class="tags">
     {% for tax,value in taxlist[taxonomy] %}
 
-        {% set active = uri.param(taxonomy) == tax ? 'active' : '' %}
-        <a class="label label-default {{ active }}" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
+        {% set active = uri.param(taxonomy) == tax ? 'label-primary active' : 'label-default' %}
+        <a class="label {{ active }}" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
 
     {% endfor %}
 </span>
