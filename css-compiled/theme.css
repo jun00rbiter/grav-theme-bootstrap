@@ -349,6 +349,27 @@ ol.breadcrumb {
 body.fixed-nav {
   padding-top: 50px; }
 
+#grav-login {
+  max-width: 50rem !important; }
+  #grav-login .col-sm-2 {
+    width: 50%;
+    text-align: right;
+    padding-top: 5px; }
+  #grav-login .col-sm-10 {
+    width: 50%; }
+  #grav-login form {
+    padding-top: 30px; }
+  #grav-login .rememberme {
+    float: right !important; }
+  #grav-login .form-actions button {
+    margin-top: 50px; }
+  #grav-login .form-actions .button.secondary {
+    line-height: 26px; }
+    #grav-login .form-actions .button.secondary i {
+      line-height: 26px; }
+  #grav-login .button {
+    vertical-align: bottom !important; }
+
 .list-blog-header h1 {
   font-size: 35.2px; }
 
