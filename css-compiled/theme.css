@@ -433,5 +433,7 @@ body.fixed-nav {
 @media print {
   .noprint {
     display: none; } }
+.list-group-item {
+  margin: 0px !important; }
 
 /*# sourceMappingURL=theme.css.map */
